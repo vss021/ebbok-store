@@ -21,7 +21,7 @@ export default function Cart() {
   useEffect(() => {
     const cartData = async () => {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/cart/cart-data",
+        "https://server-v0-s4ta.onrender.com/api/v1/cart/cart-data",
         { headers }
       );
       setCart(response.data.data);
@@ -33,7 +33,7 @@ export default function Cart() {
   const deleteItem = async (bookid) => {
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/v1/cart/remove/${bookid}`,
+        `https://server-v0-s4ta.onrender.com/api/v1/cart/remove/${bookid}`,
         null,
         { headers }
       );
@@ -60,7 +60,7 @@ export default function Cart() {
   const palceMyOrder = async() => {
     try {
 
-      const response = await axios.post(`http://localhost:4000/api/v1/order/place-order`, {order : cart}, {headers});
+      const response = await axios.post(`https://server-v0-s4ta.onrender.com/api/v1/order/place-order`, {order : cart}, {headers});
       alert(response.data.message);
       navigatorTo("/profile/orderhistory");
 

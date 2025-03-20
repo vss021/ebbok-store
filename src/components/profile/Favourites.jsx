@@ -15,7 +15,7 @@ export default function Favourites() {
       };
 
       const response = await axios.get(
-        "http://localhost:4000/api/v1/favorite/get",
+        "https://server-v0-s4ta.onrender.com/api/v1/favorite/get",
         { headers }
       );
       setFavData(response.data.data);
@@ -32,7 +32,7 @@ export default function Favourites() {
         bookid: bookid,
       };
       const response = await axios.put(
-        `http://localhost:4000/api/v1/favorite/remove`,
+        `https://server-v0-s4ta.onrender.com/api/v1/favorite/remove`,
         null,
         { headers }
       );

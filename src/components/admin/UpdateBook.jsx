@@ -21,7 +21,7 @@ export default function UpdateBook() {
 
     const bookdata = async() => {
 
-      const responsedata = await axios.get(`http://localhost:4000/api/v1/books/get-book/${bookid}`);
+      const responsedata = await axios.get(`https://server-v0-s4ta.onrender.com/api/v1/books/get-book/${bookid}`);
 
       setData(responsedata.data.data);
     }
@@ -54,7 +54,7 @@ export default function UpdateBook() {
       alert("All Fields are required");
     } else {
       const response = await axios.put(
-        "http://localhost:4000/api/v1/books/update",
+        "https://server-v0-s4ta.onrender.com/api/v1/books/update",
         Data,
         { headers }
       );

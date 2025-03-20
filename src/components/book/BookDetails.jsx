@@ -25,7 +25,7 @@ export default function BookDetails() {
     const getData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/v1/books/get-book/${bookid}`
+          `https://server-v0-s4ta.onrender.com/api/v1/books/get-book/${bookid}`
         );
         setBookData(response.data.data);
       } catch (error) {
@@ -38,7 +38,7 @@ export default function BookDetails() {
   const handleAddToFav = async () => {
     try {
       const response = await axios.put(
-        "http://localhost:4000/api/v1/favorite/add",
+        "https://server-v0-s4ta.onrender.com/api/v1/favorite/add",
         {},
         { headers }
       );
@@ -52,7 +52,7 @@ export default function BookDetails() {
   const handleAddToCart = async () => {
     try {
       const response = await axios.put(
-        "http://localhost:4000/api/v1/cart/add",
+        "https://server-v0-s4ta.onrender.com/api/v1/cart/add",
         {},
         { headers }
       );
@@ -67,7 +67,7 @@ export default function BookDetails() {
   const handleDelete = async() => {
     try {
       const response = await axios.delete(
-        "http://localhost:4000/api/v1/books/delete",
+        "https://server-v0-s4ta.onrender.com/api/v1/books/delete",
         { headers }
       );
 

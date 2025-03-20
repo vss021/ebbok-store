@@ -23,7 +23,7 @@ export default function AllOrders() {
   useEffect(() => {
     const orderData = async () => {
       const orders = await axios.get(
-        "http://localhost:4000/api/v1/order/all-order",
+        "https://server-v0-s4ta.onrender.com/api/v1/order/all-order",
         { headers }
       );
       setAllOrder(orders.data.data);
@@ -38,7 +38,7 @@ export default function AllOrders() {
 
   const submitChanges = async(index) => {
       const id = AllOrder[index]._id;
-      const response = await axios.put(`http://localhost:4000/api/v1/order//order-status/${id}`, Value, {headers});
+      const response = await axios.put(`https://server-v0-s4ta.onrender.com/api/v1/order//order-status/${id}`, Value, {headers});
       toast.success(response.data.message);
   }
 

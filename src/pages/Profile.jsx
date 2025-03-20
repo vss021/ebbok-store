@@ -15,7 +15,7 @@ export default function Profile() {
   useEffect(() => {
     const getProfileData = async () => {
 
-      const response = await axios.get("http://localhost:4000/api/v1/user/getuser",{ headers });
+      const response = await axios.get("https://server-v0-s4ta.onrender.com/api/v1/user/getuser",{ headers });
       setProfile(response.data);
     };
     getProfileData();

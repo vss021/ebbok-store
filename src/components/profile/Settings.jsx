@@ -18,7 +18,7 @@ export default function Setting() {
     const fetchCurrentUser = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/api/v1/user/getuser`,
+          `https://server-v0-s4ta.onrender.com/api/v1/user/getuser`,
           { headers }
         );
         setValue(response.data.address)
@@ -34,7 +34,7 @@ export default function Setting() {
   const handleUpdateUser = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/v1/user/update-address`,
+        `https://server-v0-s4ta.onrender.com/api/v1/user/update-address`,
           {Address}, // Send updated data
         { headers }
       );

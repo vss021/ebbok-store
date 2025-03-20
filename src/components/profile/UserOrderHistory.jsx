@@ -16,7 +16,7 @@ export default function UserOrderHistory() {
   useEffect(() => {
     const getOrderData = async () => {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/order/all-order",
+        "https://server-v0-s4ta.onrender.com/api/v1/order/all-order",
         { headers }
       );
       setOrderHistory(response.data.data);
